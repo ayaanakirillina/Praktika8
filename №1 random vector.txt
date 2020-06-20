@@ -1,0 +1,25 @@
+#include <iostream>
+#include <vector>
+#include <ctime>
+#include "stdlib.h"
+using namespace std;
+int main()
+{
+    int n, z, v;
+    z = 100;
+    srand(time(NULL));
+    cin >> n;
+    vector<int> vector1(n); 
+    for (int i = 0; i < vector1.size(); i++)
+    {
+        vector1[i] = rand() % 50;
+        cout << "vector " << i << " = " << vector1[i] << endl;
+        if (vector1[i] < z)
+        {
+            z = vector1[i];
+            v = i;
+        }
+    }
+    cout << v << endl;
+    return 0;
+}
